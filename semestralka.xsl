@@ -19,7 +19,7 @@
             "Country": "<xsl:value-of select="content/country"/>"
                             
             "country": <xsl:choose>
-                <xsl:when test="content/country = Czech Republic">
+                <xsl:when test="content/country = 'Czech Republic'">
                     "Citizen"
                 </xsl:when>
                 <xsl:otherwise>
