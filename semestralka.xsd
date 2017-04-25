@@ -53,10 +53,10 @@
     </xs:complexType>
     <xs:complexType name="passwordType">
         <xs:sequence>
-            <xs:element type="password" name="current"/>
-            <xs:element type="password" name="new"/>
-            <xs:element type="password" name="new_verify"/>
-            <xs:element type="xs:string" name="email"/>
+            <xs:element type="password" name="current" use="required"/>
+            <xs:element type="password" name="new" use="required"/>
+            <xs:element type="password" name="new_verify" use="required"/>
+            <xs:element type="xs:string" name="email" use="required"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="mobileType">
