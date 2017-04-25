@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network>
+    <account>
+        <settings_privacy>
+            <user>
+                <username>Denis</username>
+                <email>denis@yahoo.com</email>
+                <language>EN</language>
+                <gender>Male</gender>
+                <time_zone>(GMT+01:00) Central Europe</time_zone>
+                <security>
+                    <email_login_verification type="Email">Enable</email_login_verification>
+                    <password_reset type="SMS">Enable</password_reset>
+                </security>
+                <content>
+                    <country>Czech Republic</country>
+                </content>
+            </user>
+            <privacy_safety>
+                <post_tagging>Enable</post_tagging>
+                <photo_tagging>Disable</photo_tagging>
+                <post_security>Protected</post_security>
+                <post_location>Enable</post_location>
+                <discoverability_email>Enable</discoverability_email>
+                <discoverability_phone>Disable</discoverability_phone>
+                <direct_message>Enable</direct_message>   
+            </privacy_safety>
+            <password>
+                <current>None</current>
+                <new>None</new>
+                <new_verify>None</new_verify>
+                <email>@</email>
+            </password>
+            <mobile>
+                <country>+420</country>
+                <phone_number>None</phone_number>
+            </mobile>
+            <notification>
+                <personal>
+                    <status>Disable</status>
+                    <email like="Enable" sharing="Enable" comment="Enable" password_reset="Enable" login="Enable" logout="Enable">@</email>
+                    <sms like="Disable" sharing="Disable" comment="Disable" password_reset="Enable" login="Enable" logout="Disable">+420</sms>
+                </personal>
+                <system>
+                    <status>Disable</status>
+                    <updates>Enable</updates>
+                    <news>Disable</news> 
+                </system>
+            </notification>
+            <friends>
+                <email type="Gmail">Search friends</email>
+                <email type="Exchange"> Search friends</email>
+            </friends>
+            <accounts_manager>
+                <status>Enable</status>
+                <blocked type_of="Mute">Pepa</blocked>
+                <blocked type_of="Ban">Honza</blocked>
+            </accounts_manager>
+            <apps>
+                <messenger>Enable</messenger>
+                <phone_browser>Enable</phone_browser>
+                <desktop_browser>Enable</desktop_browser>
+                <mobile_aplication>Enable</mobile_aplication>
+            </apps>
+        </settings_privacy>
+    </account>
+</network>

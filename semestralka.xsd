@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  
+    <xs:element name="network" type="networkType"/>
+    <xs:complexType name="email_login_verificationType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="enable_disable" name="type" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="password_resetType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="enable_disable" name="type" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="securityType">
+        <xs:sequence>
+            <xs:element type="email_login_verificationType" name="email_login_verification"/>
+            <xs:element type="password_resetType" name="password_reset"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="contentType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="country" use="required"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="userType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="username"/>
+            <xs:element type="xs:string" name="email"/>
+            <xs:element type="language" name="language"/>
+            <xs:element type="gender" name="gender" />
+            <xs:element type="xs:string" name="time_zone"/>
+            <xs:element type="securityType" name="security"/>
+            <xs:element type="contentType" name="content"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="privacy_safetyType">
+        <xs:sequence>
+            <xs:element type="enable_disable" name="post_tagging" use="required"/>
+            <xs:element type="enable_disable" name="photo_tagging"use="required"/>
+            <xs:element type="protected_unprotected" name="post_security"use="required"/>
+            <xs:element type="enable_disable" name="post_location"use="required"/>
+            <xs:element type="enable_disable" name="discoverability_email"use="required"/>
+            <xs:element type="enable_disable" name="discoverability_phone" use="required"/>
+            <xs:element type="enable_disable" name="direct_message" use="required"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="passwordType">
+        <xs:sequence>
+            <xs:element type="password" name="current"/>
+            <xs:element type="password" name="new"/>
+            <xs:element type="password" name="new_verify"/>
+            <xs:element type="xs:string" name="email"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="mobileType">
+        <xs:sequence>
+            <xs:element type="xs:short" name="country"/>
+            <xs:element type="number" name="phone_number"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="emailType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="enable_disable" name="like" use="required"/>
+                <xs:attribute type="enable_disable" name="sharing" use="required"/>
+                <xs:attribute type="enable_disable" name="comment" use="required"/>
+                <xs:attribute type="enable_disable" name="password_reset" use="required"/>
+                <xs:attribute type="enable_disable" name="login" use="required"/>
+                <xs:attribute type="enable_disable" name="logout" use="required"/>
+                <xs:attribute type="enable_disable" name="type" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="smsType">
+        <xs:simpleContent>
+            <xs:extension base="xs:short">
+                <xs:attribute type="enable_disable" name="like" use="required"/>
+                <xs:attribute type="enable_disable" name="sharing" use="required"/>
+                <xs:attribute type="enable_disable" name="comment" use="required"/>
+                <xs:attribute type="enable_disable" name="password_reset" use="required"/>
+                <xs:attribute type="enable_disable" name="login" use="required"/>
+                <xs:attribute type="enable_disable" name="logout" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="personalType">
+        <xs:sequence>
+            <xs:element type="enable_disable" name="status"use="required"/>
+            <xs:element type="emailType" name="email"/>
+            <xs:element type="smsType" name="sms"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="systemType">
+        <xs:sequence>
+            <xs:element type="enable_disable" name="status"/>
+            <xs:element type="enable_disable" name="updates"/>
+            <xs:element type="enable_disable" name="news"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="notificationType">
+        <xs:sequence>
+            <xs:element type="personalType" name="personal"/>
+            <xs:element type="systemType" name="system"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="friendsType">
+        <xs:sequence>
+            <xs:element type="emailType" name="email" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="blockedType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="type_of" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="accounts_managerType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="status"/>
+            <xs:element type="blockedType" name="blocked" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="appsType">
+        <xs:sequence>
+            <xs:element type="enable_disable" name="messenger"/>
+            <xs:element type="enable_disable" name="phone_browser"/>
+            <xs:element type="enable_disable" name="desktop_browser"/>
+            <xs:element type="enable_disable" name="mobile_aplication"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="settings_privacyType">
+        <xs:sequence>
+            <xs:element type="userType" name="user"/>
+            <xs:element type="privacy_safetyType" name="privacy_safety"/>
+            <xs:element type="passwordType" name="password"/>
+            <xs:element type="mobileType" name="mobile"/>
+            <xs:element type="notificationType" name="notification"/>
+            <xs:element type="friendsType" name="friends"/>
+            <xs:element type="accounts_managerType" name="accounts_manager"/>
+            <xs:element type="appsType" name="apps"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="accountType">
+        <xs:sequence>
+            <xs:element type="settings_privacyType" name="settings_privacy"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="networkType">
+        <xs:sequence>
+            <xs:element type="accountType" name="account"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="enable_disable">    
+        <xs:restriction base="xs:string"> 
+            <xs:enumeration value="Enable" />
+            <xs:enumeration value="Disable" />
+        </xs:restriction> 
+    </xs:simpleType>
+    <xs:simpleType name="protected_unprotected">    
+        <xs:restriction base="xs:string"> 
+            <xs:enumeration value="Protected" />
+            <xs:enumeration value="Unprotected" />
+        </xs:restriction> 
+    </xs:simpleType>
+    <xs:simpleType name="number">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="language">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z][a-zA-Z]"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <xs:element name="gender">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="male|female|MALE|FEMALE|Male|Female"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="password">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[a-zA-Z0-9]{8}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+    </xs:element>
+</xs:schema>
