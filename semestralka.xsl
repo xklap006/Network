@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Odkaz na GitHub https://github.com/xklap006/Network/blob/master/semestralka.xsl -->
-<!-- Vypíše uživatelé, kteří mají pohlaví "male" nebo "Male" nebo "MALE" a pokud jsou z "Czech Republic", tak vypíše "Country: Citizen" jinak "Foreigner" -->
+<!-- Vypíše uživatelé, kteří mají pohlaví "male" nebo "Male" nebo "MALE" a pokud jsou z "Czech Republic", tak vypíše "Country: Citizen" jinak "Country: Foreigner" -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="text"/>
