@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Odkaz na GitHub https://github.com/xklap006/Network/blob/master/semestralka.xml -->
 <network>
+    <!-- Account 1 -->
     <account>
         <settings_privacy>
             <user>
