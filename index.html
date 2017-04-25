@@ -8,7 +8,6 @@
         <meta name='robots' content='all'>
         <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
         <link href='/favicon.png' rel='shortcut icon' type='image/png'>
-        <style type="text/css"><!--ol {list-style: none;}ol { counter-reset: pol }li:before { counter-increment: pol; content: counters(pol,'.')'.'} }--></style>
     </head>
     <body>
         <main>
@@ -21,68 +20,305 @@
                         <a href="#elementy">Elementy</a>
                         <a href="#transformace">Transformace</a>
                         <a href="#soubory">Soubory</a>
-                        <a href="#zaver">Zaver</a>
+                        <a href="#zaver">Závěr</a>
                         <nav>
                             </header>
                             </section>
-                            <article>
-                                <h2>Metodika</h2>
-                                <p>Text text text text text text text text          
+                            <article id="uvod">
+                                <h2>Úvod</h2>
+                                <p>Semestrální práci jsem si zvolil na téma sociální síť (Network) z důvodu, že mě toto medium přijde čím dál více užitečné narozdíl od ostatních médií.
+                                <p>V rámci této práce jsem vytvořil konfigurační XML soubor pro uživatele této sítě, který slouží ke konfiguraci jejich profilu. 
                             </article>
-                            <section>
-                <h2>Elementy</h2>
-                <table style="border: 1px solid black">
-                    <tr>
-                        <th>Název elementu</th>
-                        <th>Popis elementu</th>
-                        <th>Použité restrikce</th>
-                    </tr>
-                    <tr>
-                        <td>Obsah 11</td> 
-                        <td>Obsah 12</td>
-                        <td>Obsah 13</td>               
-                    </tr>
-                    <tr>
-                        <td>Obsah 21</td> 
-                        <td>Obsah 22</td>
-                        <td>Obsah 23</td>               
-                    </tr>          
-                </table>
-                <h3>Restrikce</h3>
-                <table style="border: 1px solid black">
-                    <tr>
-                        <th>Pojmenování restrikce</th>
-                        <th>Popis restrikce</th>
-                    </tr>
-                    <tr>
-                        <td>Obsah 11</td> 
-                        <td>Obsah 12</td>            
-                    </tr>
-                    <tr>
-                        <td>Obsah 21</td> 
-                        <td>Obsah 22</td>
-                </table>
-            </section>    
-            <footer>
-                <section><h2>Obsah</h2>
-                    <ol>
-                        <li><a href="#uvod">Úvod</a></li>
-                        <li><a href="#metodika">Metodika</a></li>
-                        <li><a href="#elementy">Elementy</a>      
-                        <ol>
-                            <li><a href="#elementy_restrikce">Restrikce</a></li>
-                            <li><a href="#elementy_atributy">Atributy</a></li>
-                        </ol>
-                       </li>
-                       <li><a href="#transformace">Transformace</a></li>
-                       <li><a href="#soubory">Soubory</a></li>
-                       <li><a href="#zaver">Závěr</a></li>
-                    </ol>
-                </section>
-                <section>
-                    <strong>Vytvořil: </strong>Petr Klapka
-                </section>
-            </footer>
-        </main>
-    </body>
-</html>
+                            <article id="metodika">
+                                <h2>Metodika</h2>
+                                <h3>Použité programy</h3>
+                                <ul>
+                                    <li><a href="https://itunes.apple.com/cz/app/textwrangler/id404010395?l=cs&mt=12">TextWrangler</a>
+                                    <li><a href="https://netbeans.org/">NetBeans</a>
+                                    <li><a href="https://desktop.github.com/">GitHub Desktop</a>
+                                </ul>
+                                <h3>Použité webové stránky</h3>
+                                <ul>
+                                    <li><a href="https://www.jakpsatweb.cz/">Jak psát web</a>
+                                    <li><a href="http://stackoverflow.com/">Stack Overflow</a>
+                                    <li><a href="https://www.w3schools.com/">W3School</a>
+                                    <li><a href="https://github.com/">GitHub</a>       
+                                </ul>
+                            </article>
+                            <section id="elementy">
+                                <h2>Elementy</h2>
+                                <table border: 1px solid black">
+                                       <tr border: 1px black solid>
+                                    <th>Název elementu</th>
+                                        <th>Popis elementu</th>
+                                        <th>Použité restrikce</th>
+                                    </tr>
+                                    <tr>
+                                        <td><network></td> 
+                                        <td>Tento element obsahuje veškerou konfiguraci sítě</td>
+                                        <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>account</td> 
+                                            <td>Tento element obsahuje veškerou konfiguraci profilu uživatele</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>settings_privacy</td> 
+                                            <td>Tento element obsahuje konfiguraci soukromí uživatele</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>user</td> 
+                                            <td>Tento element obsahuje konfiguraci účtu</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>username</td> 
+                                            <td>Tento element obsahuje uživatelské jméno</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>email</td> 
+                                            <td>Tento element obsahuje/požaduje email uživatele</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>language</td> 
+                                            <td>Tento element obsahuje jazyk uživatele</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>gender</td> 
+                                            <td>Tento element obsahuje pohlaví uživatele</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>time_zone</td> 
+                                            <td>Tento element obsahuje časové pásmo, ve kterém se uživatel nachází</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>security</td> 
+                                            <td>Tento element obsahuje bezpečnostní konfiguraci</td>
+                                            <td>-</td>               
+                                        </tr>
+                                        <tr>
+                                            <td>email_login_veirification</td> 
+                                            <td>Tento element obsahuje možnost ověření účtu pomocí daného atributu</td>
+                                            <td>-</td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>password_reset</td> 
+                                            <td>Tento element obsahuje možnost obnovení hesla pomocí daného atributu</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>content</td> 
+                                            <td>Tento element obsahuje nastavení možnosti zobrazení obsahu z dané země</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>country</td> 
+                                            <td>Tento element obsahuje zemi ze které cchce uživatel zobrazovat obsah</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>privacy_safety</td> 
+                                            <td>Tento element obsahuje nastavení ochrany soukromí a bezpečnostni příspěvků uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>post_tagging</td> 
+                                            <td>Tento element povoluje označovat uživatele v příspevkách</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>photo_tagging</td> 
+                                            <td>Tento element povoluje označovat uživatele na obrázkách</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>post_security</td> 
+                                            <td>Tento element chrání příspěvky uživatele před neznámými uživateli</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>post_location</td> 
+                                            <td>Tento element nastavuje zobrazení umístění odkud byl příspvěk přidán</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>discoverability_email</td> 
+                                            <td>Tento element povoluje zobrazení emailové adresy uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>discoverability_phone</td> 
+                                            <td>Tento element povoluje zobrazení telefonního kontaktu uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>direct_message</td> 
+                                            <td>Tento element povoluje přijímání zpráv od neznámých uživatelů</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>password</td> 
+                                            <td>Tento element umožňuje změnu uživatelského hesla </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>current</td> 
+                                            <td>Tento element požaduje aktuální heslo uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>new</td> 
+                                            <td>Tento element požaduje nové heslo uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>new_verify</td> 
+                                            <td>Tento element požaduje potvrzení nového heslo uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>mobile</td> 
+                                            <td>Tento element obsahuje informaci o telefonním číslě uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>phone_number</td> 
+                                            <td>Tento element obsahuje telefonní číslo</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>notification</td> 
+                                            <td>Tento element obsahuje nastavení o notifikacích uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>personal</td> 
+                                            <td>Tento element obsahuje nastavení osobních notifikacích uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>status</td> 
+                                            <td>Tento element obsahuje informaci o stavu </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>system</td> 
+                                            <td>Tento element obsahuje nastavení systémových notifikací </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>updates</td> 
+                                            <td>Tento element obsahuje nastavení oznámení v při updatu systému </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>news</td> 
+                                            <td>Tento element obsahuje nastavení oznámení v novinek v systému </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>friends</td> 
+                                            <td>Tento element obsahuje nastavení vyhledávání přátelů</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>account_manager</td> 
+                                            <td>Tento element obsahuje nastavení oznámení v případě příspěvků </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>blocked</td> 
+                                            <td>Tento element obsahuje zablokované uživatele</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>apps</td> 
+                                            <td>Tento element obsahuje nastavení aplikací, které mají přístup k účtu </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>messenger</td> 
+                                            <td>Tento element obsahuje nastavení přístupu aplikace messenger k účtu</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>phone_browser</td> 
+                                            <td>Tento element obsahuje nastavení přístupu pomocí mobilního prohlížeče</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>desktop_browser</td> 
+                                            <td>Tento element obsahuje nastavení přístupu pomocí klasického prohlížeče</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>mobile_aplication</td> 
+                                            <td>Tento element obsahuje nastavení přístupu pomocí mobilní aplikace</td>
+                                            <td>-</td>
+                                        </tr>
+                                </table>
+                                <section id="elementy_restrikce">
+                                    <h3 >Restrikce</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Pojmenování restrikce</th>
+                                            <th>Popis restrikce</th>
+                                        </tr>
+                                        <tr>
+                                            <td>enable_disable</td> 
+                                            <td>Umožňuje pouze 2 stavy Enable|Disable</td>            
+                                        </tr>
+                                        <tr>
+                                            <td>protected_unprotected</td> 
+                                            <td>Umožňuje pouze 2 stavy Protected|Unprotected</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number</td> 
+                                            <td>Umožňuje zadání 9 číslic v rozmezí 0-9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>language</td> 
+                                            <td>Umožňuje zadání pouze 2 písmen v rozmezí a-z|A-Z</td>
+                                        </tr>
+                                        <tr>
+                                            <td>gender</td> 
+                                            <td>Umožňuje zadat pohlaví pouze ve tvaru male|female|MALE|FEMALE|Male|Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td>password</td> 
+                                            <td>Umožňuje zadat pouze 8 místné heslo používající znaky a-z|A-Z a číslice 0-9 </td>
+                                        </tr>
+                                    </table>
+                                </section>
+                            </section>    
+                            <footer>
+                                <section><h2>Obsah</h2>
+                                    <ol>
+                                        <li><a href="#uvod">Úvod</a></li>
+                                        <li><a href="#metodika">Metodika</a></li>
+                                        <li><a href="#elementy">Elementy</a>      
+                                            <ul>
+                                                <li><a href="#elementy_restrikce">Restrikce</a></li>
+                                                <li><a href="#elementy_atributy">Atributy</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#transformace">Transformace</a></li>
+                                        <li><a href="#soubory">Soubory</a></li>
+                                        <li><a href="#zaver">Závěr</a></li>
+                                    </ol>
+                                </section>
+                                <section>
+                                    <strong>Vytvořil: </strong>Petr Klapka
+                                </section>
+                            </footer>
+                            </main>
+                            </body>
+                            </html>
