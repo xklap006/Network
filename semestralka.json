@@ -1,0 +1,91 @@
+[
+   {
+      "settings_privacy": {
+         "user": {
+            "username": "Denis",
+            "email": "denis@yahoo.com",
+            "language": "EN",
+            "gender": "Male",
+            "time_zone": "(GMT+01:00) Central Europe",
+            "security": {
+               "email_login_verification": "Enable",
+               "password_reset": "Enable"
+            },
+            "content": {
+               "country": "Czech Republic"
+            }
+         },
+         "privacy_safety": {
+            "post_tagging": "Enable",
+            "photo_tagging": "Disable",
+            "post_security": "Protected",
+            "post_location": "Enable",
+            "discoverability_email": "Enable",
+            "discoverability_phone": "Disable",
+            "direct_message": "Enable"
+         },
+         "password": {
+            "current": "None",
+            "new": "None",
+            "new_verify": "None",
+            "email": "@"
+         },
+         "mobile": {
+            "country": "+420",
+            "phone_number": "None"
+         },
+         "notification": {
+            "personal": {
+               "status": {
+                  "email": {
+                     "@like": "Enable",
+                     "@sharing": "Enable",
+                     "@comment": "Enable",
+                     "@password_reset": "Enable",
+                     "@login": "Enable",
+                     "@logout": "Enable",
+                     "#text": "@"
+                  },
+                  "sms": {
+                     "@like": "Disable",
+                     "@sharing": "Disable",
+                     "@comment": "Disable",
+                     "@password_reset": "Enable",
+                     "@login": "Enable",
+                     "@logout": "Disable",
+                     "#text": "+420"
+                  }
+               }
+            },
+            "system": {
+               "status": "Disable",
+               "updates": "Enable",
+               "news": "Disable"
+            }
+         },
+         "friends": [
+            "Search friends",
+            "Search friends"
+         ],
+         "accounts_manager": {
+            "status": "Enable",
+            "blocked": [
+               {
+                  "@type_of": "Mute",
+                  "#text": "Pepa"
+               },
+               {
+                  "@type_of": "Ban",
+                  "#text": "Honza"
+               }
+            ]
+         },
+         "apps": {
+            "messenger": "Enable",
+            "phone_browser": "Enable",
+            "desktop_browser": "Enable",
+            "mobile_aplication": "Enable"
+         }
+      }
+   }
+]
