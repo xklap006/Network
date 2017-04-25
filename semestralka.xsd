@@ -4,6 +4,42 @@
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
   
+    <!-- Restriction -->
+    <xs:simpleType name="enable_disable">    
+        <xs:restriction base="xs:string"> 
+            <xs:enumeration value="Enable" />
+            <xs:enumeration value="Disable" />
+        </xs:restriction> 
+    </xs:simpleType>
+    <xs:simpleType name="protected_unprotected">    
+        <xs:restriction base="xs:string"> 
+            <xs:enumeration value="Protected"/>
+            <xs:enumeration value="Unprotected"/>
+        </xs:restriction> 
+    </xs:simpleType>
+    <xs:simpleType name="number">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="language">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z][a-zA-Z]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:simpleType> 
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="male|female|MALE|FEMALE|Male|Female"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="password">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- Network -->
     <xs:element name="network" type="networkType"/>
     <xs:complexType name="email_login_verificationType">
         <xs:simpleContent>
@@ -159,39 +195,4 @@
             <xs:element type="accountType" name="account"/>
         </xs:sequence>
     </xs:complexType>
-     <!-- Restriction -->
-    <xs:simpleType name="enable_disable">    
-        <xs:restriction base="xs:string"> 
-            <xs:enumeration value="Enable" />
-            <xs:enumeration value="Disable" />
-        </xs:restriction> 
-    </xs:simpleType>
-    <xs:simpleType name="protected_unprotected">    
-        <xs:restriction base="xs:string"> 
-            <xs:enumeration value="Protected"/>
-            <xs:enumeration value="Unprotected"/>
-        </xs:restriction> 
-    </xs:simpleType>
-    <xs:simpleType name="number">
-        <xs:restriction base="xs:integer">
-            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="language">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[a-zA-Z][a-zA-Z]"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:simpleType> 
-    <xs:simpleType name="gender">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="male|female|MALE|FEMALE|Male|Female"/>
-        </xs:restriction>
-    </xs:simpleType>
-    <xs:simpleType name="password">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-zA-Z0-9]{8}"/>
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>
