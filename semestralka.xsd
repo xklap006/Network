@@ -99,9 +99,9 @@
     </xs:complexType>
     <xs:complexType name="systemType">
         <xs:sequence>
-            <xs:element type="enable_disable" name="status"/>
-            <xs:element type="enable_disable" name="updates"/>
-            <xs:element type="enable_disable" name="news"/>
+            <xs:element type="enable_disable" name="status" use="required"/>
+            <xs:element type="enable_disable" name="updates" use="required"/>
+            <xs:element type="enable_disable" name="news" use="required"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="notificationType">
