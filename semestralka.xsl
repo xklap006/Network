@@ -6,8 +6,8 @@
     <xsl:template match="/network">
         {
         "settings_privacy":[
-        <xsl:for-each select="settings_privacy/user[gender = 'male'or gender = 'Male' or gender = 'MALE']">
-            <xsl:sort select="username" order="descending"/>
+        <xsl:for-each select="account/settings_privacy/user[gender = 'male'or gender = 'Male' or gender = 'MALE']">
+            <xsl:sort select="account/settings_privacy/user/username" order="descending"/>
             
             {
             "Email": "<xsl:value-of select="email" />",
