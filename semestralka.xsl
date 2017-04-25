@@ -10,15 +10,14 @@
             <xsl:sort select="account/settings_privacy/user/username" order="descending"/>
             
             {
+            "Username": "<xsl:value-of select="username" />",
             "Email": "<xsl:value-of select="email" />",
             "Language": "<xsl:value-of select="language" />",
             "Gender": "<xsl:value-of select="gender" />",
             "Time Zone": "<xsl:value-of select="time_zone" />",
-            "Email verification": "<xsl:value-of select="security/email_login_verification"/>",
-            "Country": "<xsl:value-of select="content/country"/>"
-                            
-            "country": <xsl:choose>
-                <xsl:when test="settings_privacy/user/content[country = 'Czech Republic']">
+            "Email verification": "<xsl:value-of select="security/email_login_verification"/>",               
+            "Country": <xsl:choose>
+                <xsl:when test="content[country = 'Czech Republic']">
                     "Citizen"
                 </xsl:when>
                 <xsl:otherwise>
