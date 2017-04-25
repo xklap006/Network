@@ -37,9 +37,10 @@
             </mobile>
             <notification>
                 <personal>
-                    <status>Disable</status>
-                    <email like="Enable" sharing="Enable" comment="Enable" password_reset="Enable" login="Enable" logout="Enable">@</email>
-                    <sms like="Disable" sharing="Disable" comment="Disable" password_reset="Enable" login="Enable" logout="Disable">+420</sms>
+                    <status>
+                        <email like="Enable" sharing="Enable" comment="Enable" password_reset="Enable" login="Enable" logout="Enable">@</email>
+                        <sms like="Disable" sharing="Disable" comment="Disable" password_reset="Enable" login="Enable" logout="Disable">+420</sms>
+                    </status>
                 </personal>
                 <system>
                     <status>Disable</status>

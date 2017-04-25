@@ -31,12 +31,12 @@
     </xs:complexType>
     <xs:complexType name="userType">
         <xs:sequence>
-            <xs:element type="xs:string" name="username"/>
-            <xs:element type="xs:string" name="email"/>
+            <xs:element type="xs:string" name="username" use="required"/>
+            <xs:element type="xs:string" name="email" use="required"/>
             <xs:element type="language" name="language"/>
             <xs:element type="gender" name="gender" />
             <xs:element type="xs:string" name="time_zone"/>
-            <xs:element type="securityType" name="security"/>
+            <xs:element type="securityType" name="security" use="required"/>
             <xs:element type="contentType" name="content"/>
         </xs:sequence>
     </xs:complexType>
@@ -158,6 +158,7 @@
             <xs:element type="accountType" name="account"/>
         </xs:sequence>
     </xs:complexType>
+     <!-- Restriction -->
     <xs:simpleType name="enable_disable">    
         <xs:restriction base="xs:string"> 
             <xs:enumeration value="Enable" />
@@ -175,25 +176,21 @@
             <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:element name="language">
+    <xs:simpleType name="language">
         <xs:simpleType>
             <xs:restriction base="xs:string">
                 <xs:pattern value="[a-zA-Z][a-zA-Z]"/>
             </xs:restriction>
         </xs:simpleType>
-        <xs:element name="gender">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:pattern value="male|female|MALE|FEMALE|Male|Female"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:element>
-        <xs:element name="password">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:pattern value="[a-zA-Z0-9]{8}"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:element>
-    </xs:element>
+    </xs:simpleType> 
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="male|female|MALE|FEMALE|Male|Female"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="password">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
