@@ -6,7 +6,7 @@
             "email": "denis@yahoo.com",
             "language": "EN",
             "gender": "Male",
-            "time_zone": "(GMT+01:00) Central Europe",
+            "time_zone": "(GMT+0:00) Central Europe",
             "security": {
                "email_login_verification": "Enable",
                "password_reset": "Enable"
