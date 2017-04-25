@@ -34,7 +34,7 @@
             <xs:element type="xs:string" name="username" use="required"/>
             <xs:element type="xs:string" name="email" use="required"/>
             <xs:element type="language" name="language"/>
-            <xs:element type="gender" name="gender" />
+            <xs:element type="gender" name="gender"/>
             <xs:element type="xs:string" name="time_zone"/>
             <xs:element type="securityType" name="security" use="required"/>
             <xs:element type="contentType" name="content"/>
@@ -167,8 +167,8 @@
     </xs:simpleType>
     <xs:simpleType name="protected_unprotected">    
         <xs:restriction base="xs:string"> 
-            <xs:enumeration value="Protected" />
-            <xs:enumeration value="Unprotected" />
+            <xs:enumeration value="Protected"/>
+            <xs:enumeration value="Unprotected"/>
         </xs:restriction> 
     </xs:simpleType>
     <xs:simpleType name="number">
