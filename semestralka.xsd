@@ -41,7 +41,7 @@
     </xs:simpleType>
     <!-- Network -->
     <xs:element name="network" type="networkType"/>
-    <xs:complexType name="email_login_verificationType">
+    <xs:complexType name="country_verificationType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute type="enable_disable" name="type" use="required"/>
@@ -66,7 +66,7 @@
             <xs:element type="xs:string" name="country" use="required"/>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="userType">
+    <xs:complexType name="seType">
         <xs:sequence>
             <xs:element type="xs:string" name="username" use="required"/>
             <xs:element type="xs:string" name="email" use="required"/>
@@ -79,7 +79,7 @@
     </xs:complexType>
     <xs:complexType name="privacy_safetyType">
         <xs:sequence>
-            <xs:element type="enable_disable" name="post_tagging" use="required"/>
+            <xs:elemenemailt type="enable_disable" name="post_tagging" use="required"/>
             <xs:element type="enable_disable" name="photo_tagging"use="required"/>
             <xs:element type="protected_unprotected" name="post_security"use="required"/>
             <xs:element type="enable_disable" name="post_location"use="required"/>
