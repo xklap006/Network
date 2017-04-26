@@ -26,25 +26,29 @@
                             </section>
                             <article id="uvod">
                                 <h2>Úvod</h2>
-                                <p>Semestrální práci jsem si zvolil na téma sociální síť (Network) z důvodu, že mě toto medium přijde čím dál více užitečné narozdíl od ostatních médií.
+                                <p>Semestrální práci jsem si zvolil na téma sociální síť (Network) z důvodu, že mě tato služba přinásí daleko korektnější informace a novinky narozdíl od běžných médií a přijde mi v dnešní době už skoro nezbytnou součástí každého z nás.
                                 <p>V rámci této práce jsem vytvořil konfigurační XML soubor pro uživatele této sítě, který slouží ke konfiguraci jejich profilu. 
                             </article>
-                            <article id="metodika">
+                            <section id="metodika">
                                 <h2>Metodika</h2>
-                                <h3>Použité programy</h3>
-                                <ul>
-                                    <li><a href="https://itunes.apple.com/cz/app/textwrangler/id404010395?l=cs&mt=12">TextWrangler</a>
-                                    <li><a href="https://netbeans.org/">NetBeans</a>
-                                    <li><a href="https://desktop.github.com/">GitHub Desktop</a>
-                                </ul>
-                                <h3>Použité webové stránky</h3>
-                                <ul>
-                                    <li><a href="https://www.jakpsatweb.cz/">Jak psát web</a>
-                                    <li><a href="http://stackoverflow.com/">Stack Overflow</a>
-                                    <li><a href="https://www.w3schools.com/">W3School</a>
-                                    <li><a href="https://github.com/">GitHub</a>       
-                                </ul>
-                            </article>
+                                <section id="metodika_programy">
+                                    <h3>Použité programy</h3>
+                                    <ul>
+                                        <li><a href="https://itunes.apple.com/cz/app/textwrangler/id404010395?l=cs&mt=12">TextWrangler</a>
+                                        <li><a href="https://netbeans.org/">NetBeans</a>
+                                        <li><a href="https://desktop.github.com/">GitHub Desktop</a>
+                                    </ul>
+                                </section>
+                                <section id="metodika_stranky">
+                                    <h3>Použité webové stránky</h3>
+                                    <ul>
+                                        <li><a href="https://www.jakpsatweb.cz/">Jak psát web</a>
+                                        <li><a href="http://stackoverflow.com/">Stack Overflow</a>
+                                        <li><a href="https://www.w3schools.com/">W3School</a>
+                                        <li><a href="https://github.com/">GitHub</a>       
+                                    </ul>
+                                </section>
+                            </section>
                             <section id="elementy">
                                 <h2>Elementy</h2>
                                 <table border: 1px solid black">
@@ -86,7 +90,7 @@
                                         <tr>
                                             <td>language</td> 
                                             <td>Tento element obsahuje jazyk uživatele</td>
-                                            <td>-</td>               
+                                            <td>language</td>               
                                         </tr>
                                         <tr>
                                             <td>gender</td> 
@@ -211,32 +215,32 @@
                                         </tr>
                                         <tr>
                                             <td>system</td> 
-                                            <td>Tento element obsahuje nastavení systémových notifikací </td>
+                                            <td>Tento element obsahuje oprávnění systémových notifikací </td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
                                             <td>updates</td> 
-                                            <td>Tento element obsahuje nastavení oznámení v při updatu systému </td>
+                                            <td>Tento element obsahuje oprávnění oznámení při updatu systému </td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
                                             <td>news</td> 
-                                            <td>Tento element obsahuje nastavení oznámení v novinek v systému </td>
+                                            <td>Tento element obsahuje oprávnění oznámení v novinek v systému </td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
                                             <td>friends</td> 
-                                            <td>Tento element obsahuje nastavení vyhledávání přátelů</td>
+                                            <td>Tento element obsahuje možnost vyhledávání přátelů</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
                                             <td>account_manager</td> 
-                                            <td>Tento element obsahuje nastavení oznámení v případě příspěvků </td>
+                                            <td>Tento element obsahuje oprávnění oznámení v případě příspěvků </td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
                                             <td>blocked</td> 
-                                            <td>Tento element obsahuje zablokované uživatele</td>
+                                            <td>Tento element obsahuje nastavení možnosti blokování uživatelů</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
@@ -274,11 +278,11 @@
                                         </tr>
                                         <tr>
                                             <td>enable_disable</td> 
-                                            <td>Umožňuje pouze 2 stavy Enable|Disable</td>            
+                                            <td>Umožňuje pouze 2 stavy Enable | Disable</td>            
                                         </tr>
                                         <tr>
                                             <td>protected_unprotected</td> 
-                                            <td>Umožňuje pouze 2 stavy Protected|Unprotected</td>
+                                            <td>Umožňuje pouze 2 stavy Protected | Unprotected</td>
                                         </tr>
                                         <tr>
                                             <td>number</td> 
@@ -290,20 +294,76 @@
                                         </tr>
                                         <tr>
                                             <td>gender</td> 
-                                            <td>Umožňuje zadat pohlaví pouze ve tvaru male|female|MALE|FEMALE|Male|Female</td>
+                                            <td>Umožňuje zadat pohlaví pouze ve tvaru male | female | MALE | FEMALE | Male | Female</td>
                                         </tr>
                                         <tr>
                                             <td>password</td> 
-                                            <td>Umožňuje zadat pouze 8 místné heslo používající znaky a-z|A-Z a číslice 0-9 </td>
+                                            <td>Umožňuje zadat pouze 8 místné heslo používající znaky a-z | A-Z a číslice 0-9 </td>
                                         </tr>
                                     </table>
                                 </section>
-                            </section>    
+                                <section id="elementy_atributy">
+                                    <h3>Atributy</h3>
+                                    <table>
+                                        <tr>
+                                            <td>like</td> 
+                                            <td>Určuje stav oprávnění</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sharing</td> 
+                                            <td>Určuje stav oprávnění</td>
+                                        </tr>
+                                        <tr>
+                                            <td>comment</td> 
+                                            <td>Určuje stav oprávnění</td>
+                                        </tr>
+                                        <tr>
+                                            <td>password_reset</td> 
+                                            <td>Určuje stav oprávnění</td>
+                                        </tr>
+                                        <tr>
+                                            <td>login</td> 
+                                            <td>Určuje stav oprávnění</td>
+                                        </tr>
+                                        <tr>
+                                            <td>logout</td> 
+                                            <td>Určuje stav oprávnění</td>
+                                        </tr>
+                                        <tr>
+                                            <td>type</td> 
+                                            <td>Určuje typ externí služby</td>
+                                        </tr>
+                                        <tr>
+                                            <td>type_of</td> 
+                                            <td>Určuje typ blokace</td>
+                                        </tr>
+                                    </table> 
+                                </section>
+                            </section>
+                            <article id="transformace">
+                                    <h2>Transformace</h2>
+                                    <p>Transformace pomocí cyklu for-each vybere uživatele mužského pohlaví a pomocí JSON odešle informace , následně je seřadí podle uživatelského jména sestupně, zobrazí uživatelské jméno, email, jazyk, pohlaví, časovou zonu, stav emailového ověření a pokud jsou z České Republiky, tak vypíše, že se jedná o občana této země, pokud ne, tak vypíše, že se jedná o cizince.
+                            </article>
+                            <section id="soubory">
+                                    <h2>Soubory</h2>
+                                    <ul>
+                                        <li><a href="https://github.com/xklap006/Network/blob/master/semestralka.xml">Semestralka.xml</a>
+                                        <li><a href="https://github.com/xklap006/Network/blob/master/semestralka.xsd">Semestralka.xsd</a>
+                                        <li><a href="https://github.com/xklap006/Network/blob/master/semestralka.xsl">Semestralka.xsl</a>
+                                        <li><a href="https://github.com/xklap006/Network/blob/master/semestralka.json">Semestralka.json</a>
+                                        <li><a href="https://github.com/xklap006/Network/blob/master/index.html">Dokumentace</a> 
+                                    </ul>
+                            </section>
                             <footer>
                                 <section><h2>Obsah</h2>
                                     <ol>
                                         <li><a href="#uvod">Úvod</a></li>
-                                        <li><a href="#metodika">Metodika</a></li>
+                                        <li><a href="#metodika">Metodika</a>
+                                            <ul>
+                                                <li><a href="#metodika_programy">Použité programy</a></li>
+                                                <li><a href="#metodika_stranky">Použité webové stránky</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="#elementy">Elementy</a>      
                                             <ul>
                                                 <li><a href="#elementy_restrikce">Restrikce</a></li>
@@ -316,7 +376,18 @@
                                     </ol>
                                 </section>
                                 <section>
-                                    <strong>Vytvořil: </strong>Petr Klapka
+                                <strong>Vytvořil:</strong> © 
+                                <author>
+                                     Petr Klapka (xklap006)
+                                </author>
+                                |
+                                <school>
+                                    Česká zemědelská univerzita v Praze (ČZU)
+                                </school>
+                                |
+                                <date>
+                                    2017
+                                </date>
                                 </section>
                             </footer>
                             </main>
